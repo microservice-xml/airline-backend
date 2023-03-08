@@ -1,6 +1,6 @@
-package com.example.airlinebackend.Repository;
+package com.example.airlinebackend.repository;
 
-import com.example.airlinebackend.Model.User;
+import com.example.airlinebackend.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

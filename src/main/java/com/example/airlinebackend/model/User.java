@@ -1,6 +1,6 @@
-package com.example.airlinebackend.Model;
+package com.example.airlinebackend.model;
 
-import com.example.airlinebackend.Model.Enum.Role;
+import com.example.airlinebackend.model.Enum.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,8 @@
-package com.example.airlinebackend.Service;
+package com.example.airlinebackend.service;
 
-import com.example.airlinebackend.Exception.NotFoundException;
-import com.example.airlinebackend.Model.User;
-import com.example.airlinebackend.Repository.UserRepository;
+import com.example.airlinebackend.exception.NotFoundException;
+import com.example.airlinebackend.model.User;
+import com.example.airlinebackend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

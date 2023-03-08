@@ -1,7 +1,7 @@
-package com.example.airlinebackend.Controller;
+package com.example.airlinebackend.controller;
 
-import com.example.airlinebackend.Model.User;
-import com.example.airlinebackend.Service.UserService;
+import com.example.airlinebackend.model.User;
+import com.example.airlinebackend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @PostMapping
-    public User add(User user) {
+    public User add(@RequestBody User user) {
         return userService.add(user);
     }
 

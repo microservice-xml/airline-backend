@@ -1,4 +1,4 @@
-package com.example.airlinebackend.Model;
+package com.example.airlinebackend.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

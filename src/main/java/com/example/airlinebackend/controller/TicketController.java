@@ -1,4 +1,4 @@
-package com.example.airlinebackend.Controller;
+package com.example.airlinebackend.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;

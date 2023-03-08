@@ -1,27 +1,28 @@
-package com.example.airlinebackend.Model;
+package com.example.airlinebackend.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.time.LocalDateTime;
+
+@Document
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@Document
-public class Ticket {
-
-    @Id
-    private String id;
+public class FlightRoute {
 
     @Field
-    private String userId;
+    private LocalDateTime arrival;
 
     @Field
-    private String flightId;
+    private LocalDateTime departure;
 
     @Field
-    private double payedPrice;
+    private String arrivalCity;
+
+    @Field
+    private String departureCity;
 }
