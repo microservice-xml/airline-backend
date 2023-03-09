@@ -25,5 +25,6 @@ public class Flight {
     @Field
     private double ticketPrice;
 
+    @Field
     private FlightRoute route;
 }

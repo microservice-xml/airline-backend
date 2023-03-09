@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDateTime;
 
-@Document
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
