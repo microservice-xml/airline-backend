@@ -1,7 +1,6 @@
 package com.example.airlinebackend.controller;
 
 import com.example.airlinebackend.model.Flight;
-import com.example.airlinebackend.model.User;
 import com.example.airlinebackend.service.FlightService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -28,5 +27,10 @@ public class FlightController {
     @GetMapping("/{id}")
     public Flight findById(@PathVariable("id") String id){
         return flightService.findById(id);
+    }
+
+    @GetMapping("/search")
+    public List<Flight> searchFlights(@RequestParam("ticketPrice") int ticketPrice) {
+        return flightService.searchFlights(ticketPrice);
     }
 }

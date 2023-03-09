@@ -23,4 +23,9 @@ public class FlightService {
     public Flight findById(String id){
         return flightRepository.findById(id).orElseThrow(() -> new NotFoundException("Flight doesn't exist"));
     }
+
+    public List<Flight> searchFlights(int ticketPrice) {
+        List<Flight> flights = flightRepository.searchFlights(ticketPrice);
+        return flights;
+    }
 }
