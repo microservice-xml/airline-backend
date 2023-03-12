@@ -5,6 +5,8 @@ import com.example.airlinebackend.service.FlightService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -30,7 +32,7 @@ public class FlightController {
     }
 
     @GetMapping("/search")
-    public List<Flight> searchFlights(@RequestParam("ticketPrice") int ticketPrice) {
-        return flightService.searchFlights(ticketPrice);
+    public List<Flight> searchFlights(LocalDateTime arrival, String arrivalCity, String departureCity, int desiredSeats) {
+        return flightService.searchFlights(arrival, arrivalCity, departureCity, desiredSeats);
     }
 }
