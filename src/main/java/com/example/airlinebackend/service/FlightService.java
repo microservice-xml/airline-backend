@@ -6,6 +6,8 @@ import com.example.airlinebackend.repository.FlightRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -22,5 +24,17 @@ public class FlightService {
     }
     public Flight findById(String id){
         return flightRepository.findById(id).orElseThrow(() -> new NotFoundException("Flight doesn't exist"));
+    }
+
+    public List<Flight> searchFlights(LocalDateTime arrival, String arrivalCity, String departureCity, int desiredSeats) {
+        try {
+            List<Flight> flights = flightRepository.searchFlights(arrival, arrivalCity, departureCity, desiredSeats);
+            return flights;
+        } catch(Exception e)
+        {
+            e.printStackTrace();
+            return null;
+        }
+
     }
 }

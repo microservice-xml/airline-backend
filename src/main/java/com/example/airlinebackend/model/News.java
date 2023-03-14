@@ -7,27 +7,35 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Document
-public class Flight {
+public class News {
 
     @Id
     private String id;
 
     @Field
+    private String title;
+
+    @Field
+    private String author;
+
+    @Field
+    private String slug;
+
+    @Field
+    private LocalDateTime createdOn;
+
+    @Field
+    private String subHeader;
+
+    @Field
     private String description;
 
-    @Field
-    private int numberOfSeats;
-
-    @Field
-    private int availableSeats;
-
-    @Field
-    private double ticketPrice;
-
-    @Field
-    private FlightRoute route;
+    private List<Section> sections;
 }
