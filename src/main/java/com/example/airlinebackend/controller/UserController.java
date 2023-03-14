@@ -17,7 +17,6 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-    private final AuthenticationService service;
 
     @GetMapping
     public List<User> findAll() {
@@ -27,20 +26,10 @@ public class UserController {
     @GetMapping("/email/{email}")
     public User findByEmail(@PathVariable("email") String email){ return userService.findByEmail(email); }
 
-    @PostMapping("/register")
-    public User add(@RequestBody User user) {
-        return userService.add(user);
-    }
-
     @GetMapping("/{id}")
     public User findById(@PathVariable("id") String id){
         return userService.findById(id);
     }
 
-    @PostMapping("/authenticate")
-    public ResponseEntity<AuthenticationResponse> authenticate(
-            @RequestBody AuthenticationRequest request
-    ) {
-        return ResponseEntity.ok(service.authenticate(request));
-    }
+
 }
