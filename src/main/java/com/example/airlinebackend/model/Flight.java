@@ -23,6 +23,9 @@ public class Flight {
     private int numberOfSeats;
 
     @Field
+    private int availableSeats;
+
+    @Field
     private double ticketPrice;
 
     @Field

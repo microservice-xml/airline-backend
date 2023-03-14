@@ -1,11 +1,12 @@
 package com.example.airlinebackend.controller;
 
 import com.example.airlinebackend.model.Flight;
-import com.example.airlinebackend.model.User;
 import com.example.airlinebackend.service.FlightService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -28,5 +29,10 @@ public class FlightController {
     @GetMapping("/{id}")
     public Flight findById(@PathVariable("id") String id){
         return flightService.findById(id);
+    }
+
+    @GetMapping("/search")
+    public List<Flight> searchFlights(LocalDateTime arrival, String arrivalCity, String departureCity, int desiredSeats) {
+        return flightService.searchFlights(arrival, arrivalCity, departureCity, desiredSeats);
     }
 }
