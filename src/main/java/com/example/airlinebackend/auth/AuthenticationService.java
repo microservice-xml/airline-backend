@@ -10,6 +10,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
@@ -29,10 +31,8 @@ public class AuthenticationService {
         );
         var user = repository.findByEmail(request.getEmail())
                 .orElseThrow();
-        var jwtToken = jwtService.generateToken(user);
-        return AuthenticationResponse.builder()
-                .token(jwtToken)
-                .build();
+
+        return createToken(user);
     }
 
     public AuthenticationResponse register(User user) {
@@ -40,10 +40,17 @@ public class AuthenticationService {
         user.setRole(Role.REGISTERED);
         repository.save(user);
 
-        var jwtToken = jwtService.generateToken(user);
+        return createToken(user);
+
+    }
+
+    private AuthenticationResponse createToken(User user){
+        var claims = new HashMap<String, Object>();
+        claims.put("authorities",user.getAuthorities());
+        claims.put("id",user.getId());
+        var jwtToken = jwtService.generateToken(claims, user);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .build();
-
     }
 }
