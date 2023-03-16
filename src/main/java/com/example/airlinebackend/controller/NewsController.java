@@ -31,6 +31,7 @@ public class NewsController {
         return newsService.findById(id);
     }
 
+    @CrossOrigin
     @GetMapping("/random")
     public News getRandomArticle() {
         return newsService.getRandomArticle();
