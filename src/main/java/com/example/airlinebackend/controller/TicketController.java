@@ -1,5 +1,6 @@
 package com.example.airlinebackend.controller;
 
+import com.example.airlinebackend.dto.PurchaseDto;
 import com.example.airlinebackend.model.Ticket;
 import com.example.airlinebackend.model.User;
 import com.example.airlinebackend.service.TicketService;
@@ -28,5 +29,17 @@ public class TicketController {
     @GetMapping("/{id}")
     public Ticket findById(@PathVariable("id") String id){
         return ticketService.findById(id);
+    }
+
+    @PostMapping
+    @RequestMapping("/purchase")
+    public void purchase(@RequestBody PurchaseDto purchaseDto) {
+        ticketService.purchase(purchaseDto);
+    }
+
+    @GetMapping
+    @RequestMapping("/user/{userId}")
+    public List<Ticket> getAllByUser(@PathVariable("userId") String userId) {
+        return ticketService.getAllByUser(userId);
     }
 }

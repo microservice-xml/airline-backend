@@ -37,4 +37,9 @@ public class FlightService {
         }
 
     }
+
+    public void purchaseTickets(Flight flight, Integer purchasedTicketsCount) {
+        flight.setAvailableSeats(flight.getAvailableSeats() - purchasedTicketsCount);
+        flightRepository.save(flight);
+    }
 }
