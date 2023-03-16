@@ -26,4 +26,7 @@ public class NewsService {
         return newsRepository.findAll();
     }
 
+    public News getRandomArticle() {
+        return newsRepository.getRandomArticle();
+    }
 }
