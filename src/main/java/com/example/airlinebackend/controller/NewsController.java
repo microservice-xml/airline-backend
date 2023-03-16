@@ -30,4 +30,9 @@ public class NewsController {
     public News findById(@PathVariable("id") String id){
         return newsService.findById(id);
     }
+
+    @GetMapping("/random")
+    public News getRandomArticle() {
+        return newsService.getRandomArticle();
+    }
 }
