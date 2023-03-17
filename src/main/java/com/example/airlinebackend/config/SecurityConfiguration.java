@@ -27,7 +27,7 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests()
                 .requestMatchers("/api/auth/**")
                 .permitAll()
-                .requestMatchers("/news/**")
+                .requestMatchers("/api/news/**")
                 .permitAll()
                 .requestMatchers("/api/user").hasRole("ADMIN")
                 .anyRequest()
