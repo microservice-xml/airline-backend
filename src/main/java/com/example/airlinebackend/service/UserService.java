@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -30,7 +31,7 @@ public class UserService {
         return userRepository.findById(id).orElseThrow(() -> new NotFoundException("User doesn't exist"));
     }
 
-    public User findByEmail(String email){
-        return userRepository.findByEmail(email).get();
+    public Optional<User> findByEmail(String email){
+        return userRepository.findByEmail(email);
     }
 }
