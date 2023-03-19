@@ -26,9 +26,9 @@ public class FlightService {
         return flightRepository.findById(id).orElseThrow(() -> new NotFoundException("Flight doesn't exist"));
     }
 
-    public List<Flight> searchFlights(LocalDateTime arrival, String arrivalCity, String departureCity, int desiredSeats) {
+    public List<Flight> searchFlights(String departureCity, String arrivalCity, LocalDateTime arrival, LocalDateTime departure, int desiredSeats) {
         try {
-            List<Flight> flights = flightRepository.searchFlights(arrival, arrivalCity, departureCity, desiredSeats);
+            List<Flight> flights = flightRepository.searchFlights(departureCity, arrivalCity, departure, arrival, desiredSeats);
             return flights;
         } catch(Exception e)
         {
