@@ -41,7 +41,6 @@ public class AuthenticationService {
         repository.save(user);
 
         return createToken(user);
-
     }
 
     private AuthenticationResponse createToken(User user){

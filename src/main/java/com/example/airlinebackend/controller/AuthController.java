@@ -19,9 +19,15 @@ public class AuthController {
 
     private final AuthenticationService service;
 
+    private final UserService userService;
+
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> register(@RequestBody User newUser){
-        return ResponseEntity.ok(service.register(newUser));
+    public ResponseEntity register(@RequestBody User newUser){
+        if(!userService.findByEmail(newUser.getEmail()).isEmpty()){
+            return ResponseEntity.badRequest().body("Email already used.");
+        }else {
+            return ResponseEntity.ok(service.register(newUser));
+        }
     }
 
     @PostMapping("/authenticate")
