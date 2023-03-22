@@ -33,7 +33,7 @@ public class FlightController {
     }
 
     @GetMapping("/search")
-    public List<Flight> searchFlights(String departureCity, String arrivalCity, LocalDate arrival, LocalDate departure, int desiredSeats) {
+    public List<Flight> searchFlights(String departureCity, String arrivalCity, LocalDate departure, LocalDate arrival, int desiredSeats) {
         return flightService.searchFlights(departureCity, arrivalCity, departure, arrival, desiredSeats);
     }
 }
