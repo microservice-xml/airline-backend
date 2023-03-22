@@ -1,0 +1,254 @@
+[
+  {
+    "description": "Boing 747 flight",
+    "numberOfSeats": 50,
+    "availableSeats": 3,
+    "ticketPrice": 200,
+    "route": {
+      "departure": "2023-05-10T11:30:00.000+00:00",
+      "arrival": "2023-05-10T13:30:00.000+00:00",
+      "departureCity": {
+        "name": "Belgrade",
+        "airport": "Nikola Tesla",
+        "iata_code": "BEG"
+      },
+      "arrivalCity": {
+        "name": "Paris",
+        "airport": "Charles de Gaulle",
+        "iata_code": "CDG"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Boing 747 flight",
+    "numberOfSeats": 50,
+    "availableSeats": 32,
+    "ticketPrice": 250,
+    "route": {
+      "departure": "2023-05-10T11:30:00.000+00:00",
+      "arrival": "2023-05-10T13:30:00.000+00:00",
+      "departureCity": {
+        "name": "Copenhagen",
+        "airport": "Airpot Copenhagen",
+        "iata_code": "CPH"
+      },
+      "arrivalCity": {
+        "name": "Athens",
+        "airport": "Eleftherios Venizelos",
+        "iata_code": "ATH"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Why not",
+    "numberOfSeats": 550,
+    "availableSeats": 33,
+    "ticketPrice": 200,
+    "route": {
+      "departure": "2023-05-10T11:30:00.000+00:00",
+      "arrival": "2023-05-10T12:30:00.000+00:00",
+      "departureCity": {
+        "name": "Madrid",
+        "airport": "Barajas",
+        "iata_code": "MAD"
+      },
+      "arrivalCity": {
+        "name": "Barcelona",
+        "airport": "El prat",
+        "iata_code": "BCN"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Boing 747 flight",
+    "numberOfSeats": 50,
+    "availableSeats": 3,
+    "ticketPrice": 2200,
+    "route": {
+      "departure": "2023-05-10T11:30:00.000+00:00",
+      "arrival": "2023-05-10T23:30:00.000+00:00",
+      "departureCity": {
+        "name": "Vienna",
+        "airport": "Flughafen",
+        "iata_code": "VIE"
+      },
+      "arrivalCity": {
+        "name": "Los Angeles",
+        "airport": "LA International",
+        "iata_code": "LAX"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "First ever direct flight from Rome to BA",
+    "numberOfSeats": 350,
+    "availableSeats": 178,
+    "ticketPrice": 1200,
+    "route": {
+      "departure": "2023-05-10T11:30:00.000+00:00",
+      "arrival": "2023-05-10T21:30:00.000+00:00",
+      "departureCity": {
+        "name": "Rome",
+        "airport": "Leonardo da Vinci",
+        "iata_code": "FCO"
+      },
+      "arrivalCity": {
+        "name": "Buenos Aires",
+        "airport": "Ministro Pistarini",
+        "iata_code": "EZE"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Boing 747 flight",
+    "numberOfSeats": 350,
+    "availableSeats": 289,
+    "ticketPrice": 50,
+    "route": {
+      "departure": "2023-05-10T11:30:00.000+00:00",
+      "arrival": "2023-05-10T13:30:00.000+00:00",
+      "departureCity": {
+        "name": "Prague",
+        "airport": "Vaclav Havel",
+        "iata_code": "PRG"
+      },
+      "arrivalCity": {
+        "name": "Moscow",
+        "airport": "Sheremetyevo",
+        "iata_code": "SVO"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Boing 747 flight",
+    "numberOfSeats": 50,
+    "availableSeats": 12,
+    "ticketPrice": 300,
+    "route": {
+      "departure": "2023-05-10T11:30:00.000+00:00",
+      "arrival": "2023-05-10T13:30:00.000+00:00",
+      "departureCity": {
+        "name": "Stockholm",
+        "airport": "Arlanda",
+        "iata_code": "ARN"
+      },
+      "arrivalCity": {
+        "name": "Budapest",
+        "airport": "Ferenc Liszt",
+        "iata_code": "BUD"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Late night ride with Boing 747",
+    "numberOfSeats": 50,
+    "availableSeats": 2,
+    "ticketPrice": 350,
+    "route": {
+      "departure": "2023-04-04T19:30:00.000+00:00",
+      "arrival": "2023-04-04T21:30:00.000+00:00",
+      "departureCity": {
+        "name": "Belgrade",
+        "airport": "Nikola Tesla",
+        "iata_code": "BEG"
+      },
+      "arrivalCity": {
+        "name": "Paris",
+        "airport": "Charles de Gaulle",
+        "iata_code": "CDG"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Superfast jetplane",
+    "numberOfSeats": 50,
+    "availableSeats": 9,
+    "ticketPrice": 9000,
+    "route": {
+      "departure": "2023-04-04T12:30:00.000+00:00",
+      "arrival": "2023-04-04T13:00:00.000+00:00",
+      "departureCity": {
+        "name": "Belgrade",
+        "airport": "Nikola Tesla",
+        "iata_code": "BEG"
+      },
+      "arrivalCity": {
+        "name": "Paris",
+        "airport": "Charles de Gaulle",
+        "iata_code": "CDG"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Super slow jet airplane",
+    "numberOfSeats": 50,
+    "availableSeats": 23,
+    "ticketPrice": 1100,
+    "route": {
+      "departure": "2023-04-04T11:30:00.000+00:00",
+      "arrival": "2023-04-04T19:30:00.000+00:00",
+      "departureCity": {
+        "name": "Belgrade",
+        "airport": "Nikola Tesla",
+        "iata_code": "BEG"
+      },
+      "arrivalCity": {
+        "name": "Paris",
+        "airport": "Charles de Gaulle",
+        "iata_code": "CDG"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Boing 747 flight",
+    "numberOfSeats": 50,
+    "availableSeats": 49,
+    "ticketPrice": 250,
+    "route": {
+      "departure": "2023-04-04T09:30:00.000+00:00",
+      "arrival": "2023-04-04T11:30:00.000+00:00",
+      "departureCity": {
+        "name": "Belgrade",
+        "airport": "Nikola Tesla",
+        "iata_code": "BEG"
+      },
+      "arrivalCity": {
+        "name": "Paris",
+        "airport": "Charles de Gaulle",
+        "iata_code": "CDG"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  },
+  {
+    "description": "Boing 747 flight",
+    "numberOfSeats": 50,
+    "availableSeats": 3,
+    "ticketPrice": 200,
+    "route": {
+      "departure": "2023-04-04T11:30:00.000+00:00",
+      "arrival": "2023-04-04T13:30:00.000+00:00",
+      "departureCity": {
+        "name": "Barcelona",
+        "airport": "El prat",
+        "iata_code": "BCN"
+      },
+      "arrivalCity": {
+        "name": "Vienna",
+        "airport": "Flughafen",
+        "iata_code": "VIE"
+      }
+    },
+    "_class": "com.example.airlinebackend.model.Flight"
+  }
+]
