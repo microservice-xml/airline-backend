@@ -29,6 +29,8 @@ public class SecurityConfiguration {
                 .permitAll()
                 .requestMatchers("/api/news/**")
                 .permitAll()
+                .requestMatchers("/api/flight/search")
+                .permitAll()
                 .requestMatchers("/api/user").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
