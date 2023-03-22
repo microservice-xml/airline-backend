@@ -20,8 +20,8 @@ public class FlightRoute {
     private LocalDateTime departure;
 
     @Field
-    private String arrivalCity;
+    private City arrivalCity;
 
     @Field
-    private String departureCity;
+    private City departureCity;
 }
