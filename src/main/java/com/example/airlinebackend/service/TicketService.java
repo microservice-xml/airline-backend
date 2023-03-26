@@ -1,6 +1,7 @@
 package com.example.airlinebackend.service;
 
 import com.example.airlinebackend.dto.PurchaseDto;
+import com.example.airlinebackend.dto.TicketDto;
 import com.example.airlinebackend.exception.NotFoundException;
 import com.example.airlinebackend.exception.TicketException;
 import com.example.airlinebackend.model.Ticket;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -53,7 +55,8 @@ public class TicketService {
         return tickets;
     }
 
-    public List<Ticket> getAllByUser(String userId) {
-        return ticketRepository.findAllByUserId(userId);
+    public List<TicketDto> getAllByUser(String userId) {
+        var ticketDtoList = ticketRepository.findAllByUserId(userId).stream().map((t) -> TicketDto.builder().flight(flightRepository.findById(t.getFlightId()).get()).payedPrice(t.getPayedPrice()).id(t.getId()).build()).toList();
+        return ticketDtoList;
     }
 }

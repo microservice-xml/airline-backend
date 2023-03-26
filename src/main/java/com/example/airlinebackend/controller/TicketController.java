@@ -1,6 +1,7 @@
 package com.example.airlinebackend.controller;
 
 import com.example.airlinebackend.dto.PurchaseDto;
+import com.example.airlinebackend.dto.TicketDto;
 import com.example.airlinebackend.model.Ticket;
 import com.example.airlinebackend.model.User;
 import com.example.airlinebackend.service.TicketService;
@@ -39,7 +40,7 @@ public class TicketController {
 
     @GetMapping
     @RequestMapping("/user/{userId}")
-    public List<Ticket> getAllByUser(@PathVariable("userId") String userId) {
+    public List<TicketDto> getAllByUser(@PathVariable("userId") String userId) {
         return ticketService.getAllByUser(userId);
     }
 }
