@@ -1,8 +1,10 @@
 package com.example.airlinebackend.controller;
 
+import com.example.airlinebackend.dto.FlightDto;
 import com.example.airlinebackend.model.Flight;
 import com.example.airlinebackend.service.FlightService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -23,8 +25,8 @@ public class FlightController {
     }
 
     @PostMapping
-    public Flight add(@RequestBody Flight flight) {
-        return flightService.add(flight);
+    public ResponseEntity add(@RequestBody FlightDto flight) {
+        return ResponseEntity.ok(flightService.add(flight));
     }
 
     @GetMapping("/{id}")

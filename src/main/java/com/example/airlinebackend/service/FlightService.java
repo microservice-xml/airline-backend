@@ -1,7 +1,10 @@
 package com.example.airlinebackend.service;
 
+import com.example.airlinebackend.dto.FlightDto;
 import com.example.airlinebackend.exception.NotFoundException;
 import com.example.airlinebackend.model.Flight;
+import com.example.airlinebackend.model.FlightRoute;
+import com.example.airlinebackend.repository.CityRepository;
 import com.example.airlinebackend.repository.FlightRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,9 +18,26 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FlightService {
     private final FlightRepository flightRepository;
+    private final CityRepository cityRepository;
 
-    public Flight add(Flight flight){
-        return flightRepository.save(flight);
+    public Flight add(FlightDto flight){
+
+        FlightRoute route = new FlightRoute().builder()
+                .arrival(flight.getArrival())
+                .departure(flight.getDeparture())
+                .arrivalCity(cityRepository.findByName(flight.getArrivalCity().split(" ")[0]))
+                .departureCity(cityRepository.findByName(flight.getDepartureCity().split(" ")[0]))
+                .build();
+
+        Flight newFlight = new Flight().builder()
+                .availableSeats(flight.getNumSeats())
+                .description(flight.getDesc())
+                .ticketPrice(flight.getPrice())
+                .numberOfSeats(flight.getNumSeats())
+                .route(route)
+                .build();
+
+        return flightRepository.save(newFlight);
     }
 
     public List<Flight> findAll(){

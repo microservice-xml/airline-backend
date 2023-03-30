@@ -1,8 +1,10 @@
 package com.example.airlinebackend.config;
 
+import com.example.airlinebackend.model.Enum.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -33,7 +35,7 @@ public class SecurityConfiguration {
                 .permitAll()
                 .requestMatchers("/api/city/**")
                 .permitAll()
-                .requestMatchers("/api/user").hasRole("ADMIN")
+                .requestMatchers(HttpMethod.POST, "/api/flight").hasAuthority("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()
