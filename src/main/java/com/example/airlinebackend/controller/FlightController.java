@@ -38,4 +38,9 @@ public class FlightController {
     public List<Flight> searchFlights(String departureCity, String arrivalCity, LocalDate departure, LocalDate arrival, int desiredSeats) {
         return flightService.searchFlights(departureCity, arrivalCity, departure, arrival, desiredSeats);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteFlight(@PathVariable("id") String id){
+        flightService.delete(id);
+    }
 }

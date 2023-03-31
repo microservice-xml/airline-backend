@@ -69,4 +69,8 @@ public class FlightService {
         flight.setAvailableSeats(flight.getAvailableSeats() - purchasedTicketsCount);
         flightRepository.save(flight);
     }
+
+    public void delete(String id){
+        flightRepository.deleteById(id);
+    }
 }
