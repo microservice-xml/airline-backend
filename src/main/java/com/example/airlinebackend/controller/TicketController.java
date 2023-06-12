@@ -35,6 +35,14 @@ public class TicketController {
     @PostMapping
     @RequestMapping("/purchase")
     public void purchase(@RequestBody PurchaseDto purchaseDto) {
+        System.out.println("In controller method");
+        ticketService.purchase(purchaseDto);
+    }
+
+    @PostMapping
+    @RequestMapping("/purchase/external")
+    public void purchaseExternal(@RequestBody PurchaseDto purchaseDto) {
+        System.out.println("In controller external method");
         ticketService.purchase(purchaseDto);
     }
 
