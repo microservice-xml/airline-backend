@@ -8,6 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -24,7 +25,7 @@ public class ApiKey {
     private String key;
 
     @Field
-    private LocalDateTime expiryDate;
+    private LocalDate expiryDate;
 
     @Field
     private String userId;

@@ -22,7 +22,7 @@ public class ApiKeyController {
         return apiKeyService.getAll();
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/user/{userId}")
     public List<ApiKey> getAllByUserId(@PathVariable("userId") String userId){
         return apiKeyService.getAllByUserId(userId);
     }

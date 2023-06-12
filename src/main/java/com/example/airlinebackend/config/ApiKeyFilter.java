@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Component
@@ -49,7 +50,7 @@ public class ApiKeyFilter implements Filter {
 
         System.out.println(foundApiKey);
 
-        if (!exists || (foundApiKey.getExpiryDate().isBefore(LocalDateTime.now()) && !foundApiKey.isPermanent())) {
+        if (!exists || (foundApiKey.getExpiryDate().isBefore(LocalDate.now()) && !foundApiKey.isPermanent())) {
             HttpServletResponse httpResponse = (HttpServletResponse) response;
             httpResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             System.out.println("He needs to be canceled");
