@@ -5,5 +5,5 @@ RUN mvn -f /home/app/pom.xml clean test package
 
 FROM openjdk:17
 COPY --from=build /home/app/target/*.jar app.jar
-EXPOSE 8081
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]

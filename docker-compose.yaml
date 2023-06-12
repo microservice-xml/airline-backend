@@ -5,3 +5,9 @@ services:
     restart: always
     ports:
      - 8081:8081
+    environment:
+      eureka.client.service-url.defaultZone: http://airline:8761/eureka
+
+networks:
+  default:
+    name: discovery-server_default
