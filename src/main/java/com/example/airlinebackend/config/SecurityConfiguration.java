@@ -38,6 +38,8 @@ public class SecurityConfiguration {
                     .requestMatchers("/api/city/**").permitAll()
                     .requestMatchers(HttpMethod.POST, "/api/flight").hasAuthority("ADMIN")
                     .requestMatchers(HttpMethod.DELETE, "/api/flight").hasAuthority("ADMIN")
+                    .requestMatchers("/api/user/email/**").permitAll()
+                    .requestMatchers("/api/ticket/purchase").permitAll()
                     .requestMatchers("/api/ticket/purchase/external").permitAll()
                     .requestMatchers("/api/ticket/**").hasAuthority("REGISTERED")
                     .anyRequest().authenticated()
